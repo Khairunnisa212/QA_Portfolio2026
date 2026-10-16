@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f8fc" />
+  <meta name="description" id="metaDescription" content="Khairunnisa Fajriyanti — early-career Software QA portfolio." />
+  <title>Khairunnisa Fajriyanti | Software QA Portfolio</title>
+  <style>
+    :root {
+      --navy: #17385f;
+      --navy-2: #214b78;
+      --ink: #20344b;
+      --muted: #667b93;
+      --sky: #eaf4ff;
+      --sky-2: #dceeff;
+      --line: #dce8f4;
+      --paper: #ffffff;
+      --bg: #f4f8fc;
+      --teal: #2f9d91;
+      --teal-pale: #e6f7f3;
+      --amber: #b77620;
+      --amber-pale: #fff4df;
+      --red: #b95050;
+      --red-pale: #fff0f0;
+      --shadow: 0 12px 32px rgba(32, 67, 104, .08);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; background: radial-gradient(circle at 10% 0%, #e6f4ff 0, transparent 28rem), var(--bg); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.86); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(220,232,244,.85); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 850; letter-spacing: -.04em; color: var(--navy); display: flex; align-items: center; gap: 11px; white-space: nowrap; }
+    .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; color: white; background: linear-gradient(145deg, #17385f, #3475ad); box-shadow: 0 5px 12px rgba(23,56,95,.2); font-size: 14px; letter-spacing: -.03em; }
+    .brand-name { font-size: 15px; }
+    .nav-links { display: flex; align-items: center; gap: 25px; font-size: 13px; font-weight: 650; color: #536b86; }
+    .nav-links a { transition: color .2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta { padding: 10px 15px; border: 1px solid #cadced; border-radius: 99px; color: var(--navy) !important; background: #f7fbff; }
+    .menu-toggle { display:none; border:1px solid var(--line); background:white; width:42px; height:42px; border-radius:13px; color:var(--navy); cursor:pointer; }
+    .hero { padding: 44px 0 22px; }
+    .hero-panel { position: relative; overflow: hidden; display: grid; grid-template-columns: 1.05fr .95fr; gap: 26px; align-items: center; min-height: 390px; padding: clamp(28px, 5vw, 56px); border: 1px solid #dcecff; border-radius: 30px; background: linear-gradient(125deg, rgba(255,255,255,.97) 0%, rgba(239,248,255,.98) 58%, rgba(221,239,255,.95) 100%); box-shadow: var(--shadow); }
+    .hero-panel:before { content:""; position:absolute; width:360px; height:360px; border:1px solid rgba(84,155,212,.18); border-radius:50%; right:3%; top:-220px; box-shadow:0 0 0 35px rgba(128,190,235,.08),0 0 0 75px rgba(128,190,235,.05); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #347e95; text-transform: uppercase; letter-spacing: .13em; font-size: 10px; font-weight: 850; }
+    .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: #34a99d; box-shadow: 0 0 0 4px rgba(52,169,157,.12); }
+    h1,h2,h3,h4,p { margin-top:0; }
+    h1 { color: var(--navy); font-size: clamp(36px, 5vw, 59px); line-height: 1.04; letter-spacing: -.055em; margin: 17px 0 10px; }
+    .role { color: #426589; font-size: clamp(16px, 2vw, 19px); font-weight: 730; letter-spacing: -.025em; margin-bottom: 18px; }
+    .hero-copy { max-width: 550px; color: #5d7189; font-size: 15px; line-height: 1.8; margin-bottom: 23px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid transparent; border-radius: 99px; font-size: 13px; font-weight: 750; padding: 12px 17px; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--navy); color: white; box-shadow: 0 8px 16px rgba(23,56,95,.17); }
+    .btn-primary:hover { background: #0f2c4f; }
+    .btn-secondary { background: rgba(255,255,255,.82); color: var(--navy); border-color: #ccdeef; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap: 8px; margin-top: 22px; }
+    .mini-pill, .tag { display:inline-flex; align-items:center; gap:6px; border:1px solid #d9e8f5; background:rgba(255,255,255,.75); border-radius:99px; padding:6px 10px; color:#54708d; font-size:11px; font-weight:700; }
+    .hero-visual { min-width:0; position:relative; z-index:1; display:flex; align-items:center; justify-content:center; padding: 6px; }
+    .qa-window { width: min(100%, 430px); border:1px solid #cedfed; border-radius:20px; background:white; overflow:hidden; box-shadow:0 25px 48px rgba(45,88,130,.16); transform: rotate(1.2deg); }
+    .window-top { height:40px; display:flex; align-items:center; gap:6px; padding:0 15px; background:#f6faff; border-bottom:1px solid #e3edf6; }
+    .window-dot { width:7px; height:7px; background:#bcd2e6; border-radius:50%; }
+    .window-title { margin-left:7px; color:#7790a9; font-size:10px; font-weight:700; }
+    .window-body { padding:20px; }
+    .window-head { display:flex; justify-content:space-between; gap:12px; align-items:start; margin-bottom:17px; }
+    .window-head strong { display:block; color:var(--navy); font-size:15px; }
+    .window-head span { display:block; color:#879ab0; font-size:10px; }
+    .tiny-status { border-radius:99px; color:#16806f; background:#e5f7f2; padding:5px 8px; font-size:9px; font-weight:850; white-space:nowrap; }
+    .metric-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; }
+    .metric { border:1px solid #e4eef7; border-radius:12px; padding:12px 10px; background:#fbfdff; }
+    .metric b { display:block; color:var(--navy); font-size:21px; letter-spacing:-.05em; }
+    .metric small { display:block; color:#7890a8; font-size:9px; margin-top:2px; }
+    .mock-table { margin-top:13px; border:1px solid #e4eef7; border-radius:12px; overflow:hidden; }
+    .mock-row { display:grid; grid-template-columns:1.4fr .8fr .75fr; gap:8px; align-items:center; padding:10px 12px; font-size:9px; color:#6d839a; border-bottom:1px solid #eaf1f7; }
+    .mock-row:last-child { border-bottom:0; }
+    .mock-row.head { background:#f5f9fd; color:#8da0b5; font-size:8px; font-weight:800; text-transform:uppercase; letter-spacing:.07em; }
+    .mock-row strong { color:#375778; font-weight:750; }
+    .status-pass { color:#1a917f; font-weight:800; }
+    .status-review { color:#ae7a26; font-weight:800; }
+    .floating-note { position:absolute; z-index:2; bottom:10px; left:-4px; max-width:180px; padding:13px 15px; border:1px solid #dceaf5; border-radius:16px; background:rgba(255,255,255,.94); box-shadow:var(--shadow); font-size:11px; color:#536e88; transform:rotate(-3deg); }
+    .floating-note strong { display:block; color:var(--navy); font-size:12px; margin-bottom:2px; }
+    section { padding: 43px 0; }
+    .section-top { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:21px; }
+    .section-kicker { color:#33998e; font-size:10px; text-transform:uppercase; font-weight:850; letter-spacing:.14em; margin-bottom:8px; }
+    h2 { color:var(--navy); font-size:clamp(24px, 3vw, 34px); letter-spacing:-.045em; line-height:1.15; margin-bottom:8px; }
+    .section-desc { max-width:650px; font-size:14px; color:var(--muted); margin-bottom:0; }
+    .section-count { color:#849ab0; font-size:12px; font-weight:700; white-space:nowrap; }
+    .skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+    .card { background:rgba(255,255,255,.9); border:1px solid var(--line); border-radius:var(--radius); box-shadow:0 4px 14px rgba(38,73,110,.03); }
+    .skill-card { padding:23px; }
+    .icon-box { display:grid; place-items:center; width:42px; height:42px; border-radius:14px; background:#eaf4ff; color:var(--navy); font-size:19px; margin-bottom:15px; }
+    .skill-card h3 { color:var(--navy); font-size:15px; margin-bottom:7px; }
+    .skill-card p { color:var(--muted); font-size:12px; margin-bottom:13px; }
+    .tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .tag { padding:5px 8px; background:#f6faff; font-size:10px; }
+    .tag.learning { color:#89611b; background:#fff7e6; border-color:#f2e4bd; }
+    .project-filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+    .filter-btn { border:1px solid #dce8f4; background:rgba(255,255,255,.86); color:#5a718a; border-radius:99px; padding:8px 13px; font-size:12px; font-weight:750; cursor:pointer; }
+    .filter-btn[aria-pressed="true"] { background:var(--navy); color:white; border-color:var(--navy); }
+    .projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; align-items:stretch; }
+    .project-card { display:flex; flex-direction:column; overflow:hidden; transition:transform .22s, box-shadow .22s; }
+    .project-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+    .project-art { height:174px; position:relative; overflow:hidden; padding:17px; background:linear-gradient(145deg,#e4f3ff,#f5fbff); border-bottom:1px solid #e1edf7; }
+    .project-art.erp { background:linear-gradient(145deg,#e3efff,#f3f7ff); }
+    .project-art.drone { background:linear-gradient(145deg,#e3f5f2,#f6fbfa); }
+    .project-art.practice { background:linear-gradient(145deg,#efebff,#f9f7ff); }
+    .art-chip { position:absolute; left:16px; top:14px; z-index:2; background:rgba(255,255,255,.88); border:1px solid #dce9f5; color:#4e6a86; font-weight:800; font-size:9px; border-radius:99px; padding:5px 9px; }
+    .illustration-window { position:absolute; left:28px; right:17px; bottom:14px; top:46px; border:1px solid #c8dced; background:rgba(255,255,255,.94); border-radius:12px; box-shadow:0 12px 18px rgba(51,91,128,.12); overflow:hidden; transform:rotate(-2deg); }
+    .ill-top { height:19px; border-bottom:1px solid #e4edf5; background:#f7fbff; display:flex; align-items:center; padding:0 8px; gap:4px; }
+    .ill-top i { width:4px;height:4px;border-radius:50%;background:#aac1d7; }
+    .ill-screen { display:grid; grid-template-columns:45px 1fr; height:calc(100% - 19px); }
+    .ill-sidebar { background:#183d65; padding:9px 6px; }
+    .ill-sidebar span { display:block;height:3px;background:rgba(255,255,255,.35);border-radius:5px;margin-bottom:7px; }
+    .ill-content { padding:9px; }
+    .ill-title { height:5px;width:53%;background:#7fa7cf;border-radius:4px;margin-bottom:8px; }
+    .camera-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:5px; }
+    .camera-tile { min-height:23px;border-radius:4px;background:linear-gradient(155deg,#9fc8e8,#668eae 57%,#d0e8f6); position:relative; overflow:hidden; }
+    .camera-tile:before {content:"";position:absolute;left:8px;right:8px;top:7px;height:1px;background:rgba(255,255,255,.55);transform:rotate(-12deg)}
+    .table-lines { display:grid;gap:6px;margin-top:8px; }
+    .table-line {height:4px;border-radius:4px;background:#e6eef6;}
+    .table-line:nth-child(2n) { width:78%; }
+    .kanban { display:grid;grid-template-columns:repeat(3,1fr);gap:6px;height:100%; }
+    .kanban-col {background:#f4f8fc;border-radius:5px;padding:5px;}
+    .kanban-col:before {content:"";display:block;height:4px;width:65%;background:#aac5de;border-radius:4px;margin-bottom:6px;}
+    .kanban-card {height:15px;background:white;border:1px solid #dfe9f2;border-radius:3px;margin-bottom:5px;}
+    .map-grid {height:100%;border-radius:5px;background-color:#e8f4ef;background-image:linear-gradient(30deg, transparent 43%, #bddfd2 44%, #bddfd2 47%, transparent 48%),linear-gradient(120deg,transparent 35%,#c6e4d9 36%,#c6e4d9 39%,transparent 40%),linear-gradient(70deg,transparent 65%,#c5e2d8 66%,#c5e2d8 69%,transparent 70%);position:relative;}
+    .map-pin {position:absolute;width:10px;height:10px;background:#2f9d91;border:2px solid white;border-radius:50%;box-shadow:0 2px 5px #8bbdb2;left:55%;top:42%;}
+    .map-path {position:absolute;width:55%;height:40%;border-top:2px dashed #478ec4;transform:rotate(-18deg);left:17%;top:42%;}
+    .project-content { display:flex;flex:1;flex-direction:column;padding:20px; }
+    .project-index { color:#4b79a8; text-transform:uppercase; font-size:9px; letter-spacing:.14em; font-weight:850; margin-bottom:7px; }
+    .project-content h3 { color:var(--navy); font-size:18px; letter-spacing:-.03em; margin-bottom:6px; }
+    .project-content p { color:var(--muted); font-size:12px; margin-bottom:14px; }
+    .project-content .tags { margin-bottom:17px; }
+    .project-bottom { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:auto; padding-top:15px; border-top:1px solid #edf2f7; }
+    .scope-note { color:#8296aa; font-size:10px; max-width:165px; line-height:1.4; }
+    .text-link { display:inline-flex;align-items:center;gap:7px;color:var(--navy);font-size:12px;font-weight:850;white-space:nowrap; }
+    .text-link span { display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#edf5fc;transition:transform .2s; }
+    .text-link:hover span { transform:translateX(3px); }
+    .case-detail { margin-top:11px; border-top:1px solid var(--line); padding-top:12px; }
+    .case-detail summary { font-size:12px; color:var(--navy); font-weight:800; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .case-detail summary::-webkit-details-marker { display:none; }
+    .case-detail summary:after { content:"+";font-size:19px;color:#5680a6; }
+    .case-detail[open] summary:after {content:"−";}
+    .detail-body { padding-top:13px; color:#5c7188; font-size:12px; }
+    .detail-body h4 { color:var(--navy); margin:14px 0 5px; font-size:12px; }
+    .detail-body ul { padding-left:17px; margin:6px 0 10px; }
+    .detail-body li { margin:4px 0; }
+    .callout { border-left:3px solid #75a7d5; background:#f1f8ff; color:#4a6886; padding:10px 12px; border-radius:0 10px 10px 0; margin:12px 0; font-size:11px; }
+    .artifacts-layout { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
+    .artifact-card { padding:24px; }
+    .artifact-card h3 { color:var(--navy); font-size:16px; margin-bottom:6px; }
+    .artifact-card > p { color:var(--muted);font-size:12px;margin-bottom:17px; }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%;border-collapse:collapse;font-size:11px; }
+    th {text-align:left;color:#7b91a8;background:#f4f8fc;padding:9px 10px;font-size:9px;text-transform:uppercase;letter-spacing:.06em;}
+    td {padding:10px;border-bottom:1px solid #edf2f7;color:#536a83;vertical-align:top;}
+    td strong {color:#244569;}
+    .status-review-chip {display:inline-block;background:var(--amber-pale);color:#97691f;padding:4px 7px;border-radius:6px;font-size:9px;font-weight:800;white-space:nowrap;}
+    .status-practice-chip {display:inline-block;background:#eaf3ff;color:#3f6d9e;padding:4px 7px;border-radius:6px;font-size:9px;font-weight:800;white-space:nowrap;}
+    .method-grid { display:grid; grid-template-columns:repeat(5,1fr);gap:9px; }
+    .method-step { background:rgba(255,255,255,.85);border:1px solid var(--line);border-radius:15px;padding:17px 14px;min-height:128px; }
+    .method-num { display:grid;place-items:center;width:27px;height:27px;border-radius:9px;background:#e4f2ff;color:#315c84;font-size:11px;font-weight:900;margin-bottom:12px; }
+    .method-step strong { display:block;color:var(--navy);font-size:12px;margin-bottom:5px; }
+    .method-step p { color:#73879c;font-size:10px;line-height:1.55;margin:0; }
+    .about-grid { display:grid;grid-template-columns:1fr .9fr;gap:16px; }
+    .about-card { padding:26px; }
+    .about-card h3 { color:var(--navy);font-size:17px;margin-bottom:12px; }
+    .about-card p { color:var(--muted);font-size:13px; }
+    .experience-list { display:grid;gap:14px; }
+    .experience-item { display:grid;grid-template-columns:12px 1fr;gap:12px; }
+    .timeline-dot { width:10px;height:10px;border:3px solid #b7d9f5;background:white;border-radius:50%;margin-top:5px;box-shadow:0 0 0 4px #edf6ff; }
+    .experience-item strong { display:block;color:#25486d;font-size:12px; }
+    .experience-item span { display:block;color:#7d92a8;font-size:10px;margin:2px 0 5px; }
+    .experience-item p { font-size:11px;margin-bottom:0; }
+    .caution { padding:13px 15px;border-radius:13px;background:#fff8e9;border:1px solid #f0e2bc;color:#856320;font-size:11px;line-height:1.6;margin-top:13px; }
+    .contact-panel { display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:clamp(25px,4vw,42px);border-radius:27px;background:linear-gradient(120deg,#e7f4ff,#f0efff);border:1px solid #dce8fa; }
+    .contact-panel h2 { margin-bottom:8px; }
+    .contact-panel p { max-width:600px;color:#607a95;font-size:13px;margin-bottom:0; }
+    .contact-actions { display:flex;flex-wrap:wrap;gap:9px; }
+    .contact-placeholder { margin-top:12px;font-size:10px;color:#8298ae; }
+    footer {padding:25px 0 35px;color:#8295a9;font-size:11px;}
+    .footer-inner {display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid #dfe9f3;padding-top:20px;}
+    .footer-brand { color:var(--navy);font-weight:850; }
+    .hidden { display:none !important; }
+    .toast { position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#18385d;color:white;padding:12px 17px;border-radius:12px;box-shadow:var(--shadow);font-size:12px;transition:all .25s;z-index:100;max-width:calc(100% - 30px); }
+    .toast.show {opacity:1;transform:translate(-50%,0);}
+    @media (max-width:900px) {
+      .hero-panel {grid-template-columns:1fr;gap:22px;}
+      .hero-visual {max-width:580px;width:100%;margin:0 auto;min-height:280px;}
+      .qa-window {transform:none;}
+      .floating-note {left:0;bottom:0;}
+      .projects-grid {grid-template-columns:repeat(2,1fr);}
+      .projects-grid .project-card:last-child {grid-column:span 2;}
+      .method-grid {grid-template-columns:repeat(3,1fr);}
+      .skills-grid {grid-template-columns:1fr 1fr;}
+    }
+    @media (max-width:640px) {
+      .wrap {width:min(100% - 28px, 1120px);}
+      .nav {min-height:66px;}
+      .menu-toggle {display:block;}
+      .nav-links {display:none;position:absolute;left:14px;right:14px;top:60px;padding:14px;background:white;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0;}
+      .nav-links.open {display:flex;}
+      .nav-links a {padding:12px 10px;border-radius:9px;}
+      .nav-links a:hover {background:#f4f9ff;}
+      .nav-cta {text-align:center;}
+      .hero {padding-top:20px;}
+      .hero-panel {padding:27px 22px;border-radius:23px;}
+      h1 {font-size:40px;}
+      .hero-copy {font-size:13px;}
+      .hero-visual {min-height:250px;padding:0;}
+      .window-body {padding:14px;}
+      .metric {padding:9px 7px;}
+      .metric b {font-size:18px;}
+      .floating-note {left:-5px;max-width:155px;font-size:10px;}
+      section {padding:31px 0;}
+      .section-top {display:block;}
+      .section-count {display:inline-block;margin-top:10px;}
+      .skills-grid,.projects-grid,.artifacts-layout,.about-grid {grid-template-columns:1fr;}
+      .projects-grid .project-card:last-child {grid-column:auto;}
+      .project-art {height:190px;}
+      .method-grid {grid-template-columns:1fr 1fr;}
+      .method-step {min-height:112px;}
+      .contact-panel {grid-template-columns:1fr;}
+      .contact-actions {width:100%;}
+      .contact-actions .btn {flex:1;}
+      .footer-inner {align-items:flex-start;flex-direction:column;}
+    }
+    @media (prefers-reduced-motion: reduce) { html {scroll-behavior:auto;} *,*::before,*::after {transition:none !important; animation:none !important;} }
+  
+    .project-content .status-line { color:#8296aa; font-size:10px; margin:0; }
+    .project-card .detail-body p { white-space:pre-line; }
+    .contact-placeholder { max-width:620px; }
+    .load-error { margin:20px auto; max-width:760px; padding:16px 20px; border:1px solid #efd8a8; background:#fff8e9; border-radius:14px; color:#78571c; font-size:13px; }
+    .artifact-card table { width:100%; border-collapse:collapse; font-size:11px; min-width:360px; }
+    .artifact-card th,.artifact-card td { text-align:left; padding:9px 10px; border-bottom:1px solid #e6eef6; vertical-align:top; }
+    .artifact-card th { color:#6c849b; background:#f5f9fd; font-size:9px; text-transform:uppercase; letter-spacing:.08em; }
+    .artifact-card td:first-child { width:30%; color:#355879; }
+    .artifact-category { display:inline-flex; font-size:9px; text-transform:uppercase; letter-spacing:.12em; color:#4b79a8; font-weight:850; margin-bottom:7px; }
+    .artifact-footer { display:flex; align-items:center; justify-content:space-between; border-top:1px solid #edf2f7; margin-top:13px; padding-top:11px; font-size:10px; color:#8296aa; }
+    .about-intro { white-space:pre-line; }
+    @media (max-width:900px) { .projects-grid {grid-template-columns:repeat(2,minmax(0,1fr));} }
+    @media (max-width:640px) { .projects-grid,.skills-grid,.artifacts-layout,.about-grid {grid-template-columns:1fr;} .method-grid {grid-template-columns:repeat(2,1fr);} .project-art {height:165px;} }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Portfolio home"><span class="brand-mark" id="brandMark">KF</span><span class="brand-name" id="brandName">Khairunnisa<span style="color:#3a8ba0">.</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a id="navHome" href="#home">Home</a><a id="navSkills" href="#skills">Skills</a><a id="navProjects" href="#projects">Projects</a><a id="navArtifacts" href="#artifacts">Artifacts</a><a id="navAbout" href="#about">About</a><a class="nav-cta" id="navContact" href="#contact">Let’s Connect ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home"><div class="wrap"><div class="hero-panel">
+      <div><div class="eyebrow"><span class="eyebrow-dot"></span><span id="heroEyebrow">Software Quality Assurance</span></div>
+        <h1 id="heroName">Hi, I'm<br><span style="color:#2f7698">Khairunnisa.</span></h1>
+        <div class="role" id="heroRole">Early-career Software QA · Manual Testing</div>
+        <p class="hero-copy" id="heroIntro"></p>
+        <div class="hero-actions"><a class="btn btn-primary" id="heroProjectsButton" href="#projects">Explore my projects <span aria-hidden="true">↘</span></a><a class="btn btn-secondary" id="heroArtifactsButton" href="#artifacts">View testing artifacts <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" id="cvButton" href="#" target="_blank" rel="noopener" hidden>View CV <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-meta" id="heroPills"></div>
+      </div>
+      <div class="hero-visual" aria-label="Illustrative software QA dashboard mockup"><div class="qa-window"><div class="window-top"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span><span class="window-title">qa-workspace / test-summary</span></div><div class="window-body"><div class="window-head"><div><strong>Test Execution Summary</strong><span>Illustrative interface · sample data</span></div><span class="tiny-status">REVIEW READY</span></div><div class="metric-grid"><div class="metric"><b>TC</b><small>Test scenarios</small></div><div class="metric"><b>BUG</b><small>Defect tracking</small></div><div class="metric"><b>↻</b><small>Retesting</small></div></div><div class="mock-table"><div class="mock-row head"><span>Test area</span><span>Activity</span><span>Status</span></div><div class="mock-row"><strong>Functional flows</strong><span>Test cases</span><span class="status-pass">Tracked</span></div><div class="mock-row"><strong>Edge cases</strong><span>Analysis</span><span class="status-review">Review</span></div><div class="mock-row"><strong>Documentation</strong><span>Evidence</span><span class="status-pass">Ready</span></div></div></div></div><div class="floating-note"><strong>Quality mindset</strong>Observe · Reproduce · Clarify · Document</div></div>
+    </div></div></section>
+
+    <section id="skills"><div class="wrap"><div class="section-top"><div><div class="section-kicker" id="skillsKicker">What I bring</div><h2 id="skillsTitle">QA skills & tools</h2><p class="section-desc" id="skillsDesc">A transparent view of hands-on experience and areas I am actively learning.</p></div><span class="section-count">01 / Skills</span></div><div class="skills-grid" id="skillsGrid"></div></div></section>
+
+    <section id="projects"><div class="wrap"><div class="section-top"><div><div class="section-kicker" id="projectsKicker">Selected work</div><h2 id="projectsTitle">Project case studies</h2><p class="section-desc" id="projectsDesc">Anonymized summaries of selected QA experiences. Product names, internal screens, and confidential details are omitted.</p></div><span class="section-count" id="projectCount">03 / Projects</span></div><div class="project-filters" id="projectFilters" role="group" aria-label="Filter projects"></div><div class="projects-grid" id="projectGrid"></div></div></section>
+
+    <section id="artifacts"><div class="wrap"><div class="section-top"><div><div class="section-kicker" id="artifactsKicker">Work samples</div><h2 id="artifactsTitle">Testing artifacts</h2><p class="section-desc" id="artifactsDesc">Small, readable examples of how I record a finding and separate observation from expected behavior.</p></div><span class="section-count">03 / Artifacts</span></div><div class="artifacts-layout" id="artifactGrid"></div><p style="color:#8398ad;font-size:11px;margin:13px 2px 0">These examples have been rewritten for portfolio use. No original screenshots, employee records, internal URLs, or confidential documents are included.</p></div></section>
+
+    <section id="approach"><div class="wrap"><div class="section-top"><div><div class="section-kicker" id="approachKicker">My approach</div><h2 id="approachTitle">From question to evidence</h2><p class="section-desc" id="approachDesc">A practical workflow for testing, especially when requirements are evolving or documentation is limited.</p></div><span class="section-count">04 / Process</span></div><div class="method-grid" id="approachGrid"></div></div></section>
+
+    <section id="about"><div class="wrap"><div class="section-top"><div><div class="section-kicker" id="aboutKicker">A little about me</div><h2 id="aboutTitle">Curious by nature, careful by practice</h2><p class="section-desc" id="aboutDesc">I value clear communication, documented decisions, and test results that can be understood and verified.</p></div><span class="section-count">05 / About</span></div><div class="about-grid" id="aboutGrid"></div></div></section>
+
+    <section id="contact"><div class="wrap"><div class="contact-panel"><div><div class="section-kicker" id="contactKicker">Let's connect</div><h2 id="contactTitle">Let's build better products together.</h2><p id="contactText">I'm open to learning, collaboration, and opportunities where careful testing, clear documentation, and a user-centered mindset can support software quality.</p><div class="contact-placeholder" id="contactNote">Add your public contact links in the CMS before publishing.</div></div><div class="contact-actions"><a class="btn btn-primary" id="emailLink" href="#contact">✉ Email me</a><a class="btn btn-secondary" id="linkedinLink" href="#contact" target="_blank" rel="noopener" hidden>in LinkedIn</a><a class="btn btn-secondary" id="githubLink" href="#contact" target="_blank" rel="noopener" hidden>GitHub ↗</a><a class="btn btn-secondary" id="phoneLink" href="#contact" hidden>Call ↗</a></div></div></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span class="footer-brand" id="footerBrand">Khairunnisa Fajriyanti · Software QA</span><span id="footerNote">Portfolio demo · Anonymized case studies · <span id="year"></span></span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const CONTENT_URL = './content/portfolio.json';
+    const $ = (id) => document.getElementById(id);
+    const escapeHTML = (value = '') => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const list = (value) => Array.isArray(value) ? value : [];
+    const safeUrl = (value = '') => {
+      const raw = String(value || '').trim();
+      if (!raw) return '';
+      if (raw.startsWith('/') || raw.startsWith('#')) return raw;
+      try { const url = new URL(raw); return ['https:', 'http:', 'mailto:'].includes(url.protocol) ? raw : ''; } catch { return ''; }
+    };
+    const iconFor = (index) => ['☑','⌕','⌘','▤','⚑','↗'][index % 6];
+    const setText = (id, value) => { if ($(id) && value !== undefined && value !== null) $(id).textContent = value; };
+    const artFor = (visual, project) => {
+      const kind = ['erp','drone','practice'].includes(visual) ? visual : 'camera';
+      let inside = '';
+      if (kind === 'camera') inside = '<div class="camera-grid">' + Array.from({length:6},()=>'<div class="camera-tile"></div>').join('') + '</div><div class="table-lines"><div class="table-line"></div><div class="table-line"></div></div>';
+      else if (kind === 'erp') inside = '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px"><div style="background:#eaf3ff;border-radius:4px;height:22px"></div><div style="background:#eaf7f4;border-radius:4px;height:22px"></div><div style="background:#fff3df;border-radius:4px;height:22px"></div></div><div class="table-lines"><div class="table-line"></div><div class="table-line"></div><div class="table-line"></div></div>';
+      else inside = '<div class="map-grid"><span class="map-path"></span><span class="map-pin"></span></div>';
+      return '<div class="project-art ' + kind + '"><span class="art-chip">CASE STUDY</span><div class="illustration-window"><div class="ill-top"><i></i><i></i><i></i></div><div class="ill-screen"><div class="ill-sidebar"><span></span><span></span><span></span><span></span></div><div class="ill-content"><div class="ill-title"></div>' + inside + '</div></div></div></div>';
+    };
+    function renderSkills(items) {
+      $('skillsGrid').innerHTML = list(items).map((skill, i) => '<article class="card skill-card"><div class="icon-box">' + escapeHTML(skill.icon || iconFor(i)) + '</div><h3>' + escapeHTML(skill.title) + '</h3><p>' + escapeHTML(skill.description) + '</p><div class="tags">' + list(skill.items).map(tag => '<span class="tag ' + (skill.level === 'learning' ? 'learning' : '') + '">' + escapeHTML(tag) + '</span>').join('') + '</div></article>').join('');
+    }
+    function renderProjects(items) {
+      const filters = [{id:'all',label:'All projects'},{id:'manual',label:'Manual QA'},{id:'workflow',label:'Workflow analysis'},{id:'planning',label:'Test planning'},{id:'edge-cases',label:'Edge cases'}];
+      $('projectFilters').innerHTML = filters.map((f,i) => '<button class="filter-btn" data-filter="' + f.id + '" aria-pressed="' + (i===0?'true':'false') + '">' + f.label + '</button>').join('');
+      $('projectCount').textContent = String(list(items).length).padStart(2,'0') + ' / Projects';
+      $('projectGrid').innerHTML = list(items).map((p,i) => '<article class="card project-card" data-tags="' + escapeHTML(list(p.tagsFilter).join(' ')) + '">' + artFor(p.visual,p) + '<div class="project-content"><div class="project-index">' + escapeHTML(p.category) + ' · Anonymized</div><h3>' + escapeHTML(p.title) + '</h3><p class="project-subtitle">' + escapeHTML(p.subtitle || '') + '</p><p>' + escapeHTML(p.summary) + '</p><div class="tags">' + list(p.tags).map(tag => '<span class="tag">' + escapeHTML(tag) + '</span>').join('') + '</div><div class="project-bottom"><span class="scope-note">' + escapeHTML(p.status || '') + '</span><a class="text-link" href="#case-' + escapeHTML(p.id) + '">Details <span>↘</span></a></div><details class="case-detail" id="case-' + escapeHTML(p.id) + '"><summary>Read case study</summary><div class="detail-body"><h4>Context & role</h4><p>' + escapeHTML(p.role) + '</p><h4>Challenge</h4><p>' + escapeHTML(p.challenge) + '</p><h4>QA approach</h4><ul>' + list(p.approach).map(step => '<li>' + escapeHTML(step) + '</li>').join('') + '</ul><h4>Key finding</h4><p>' + escapeHTML(p.finding) + '</p><div class="callout"><strong>Outcome:</strong> ' + escapeHTML(p.outcome) + '</div><h4>Learning</h4><p>' + escapeHTML(p.learning) + '</p></div></details></div></article>').join('');
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+        const choice = btn.dataset.filter;
+        document.querySelectorAll('.filter-btn').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+        document.querySelectorAll('.project-card').forEach(card => {
+          const tags = (card.dataset.tags || '').split(' ');
+          card.classList.toggle('hidden', choice !== 'all' && !tags.includes(choice));
+        });
+      }));
+    }
+    function renderArtifacts(items) {
+      $('artifactGrid').innerHTML = list(items).map((a,i) => '<article class="card artifact-card"><h3>' + escapeHTML(a.title) + '</h3><span class="artifact-category">' + escapeHTML(a.category) + '</span><p>' + escapeHTML(a.description) + '</p><div class="table-wrap"><table><thead><tr><th>Field</th><th>Example</th></tr></thead><tbody>' + list(a.rows).map(row => '<tr><td><strong>' + escapeHTML(row.field) + '</strong></td><td>' + escapeHTML(row.value) + '</td></tr>').join('') + '</tbody></table></div><div class="artifact-footer"><span>' + escapeHTML(a.status) + '</span>' + (safeUrl(a.url) ? '<a href="' + escapeHTML(safeUrl(a.url)) + '" target="_blank" rel="noopener noreferrer">Open ↗</a>' : '') + '</div></article>').join('');
+    }
+    function renderApproach(items) {
+      $('approachGrid').innerHTML = list(items).map((step,i) => '<div class="method-step"><span class="method-num">' + String(i+1).padStart(2,'0') + '</span><strong>' + escapeHTML(step.title) + '</strong><p>' + escapeHTML(step.description) + '</p></div>').join('');
+    }
+    function renderAbout(content) {
+      const profile = content.profile || {};
+      $('aboutGrid').innerHTML = '<article class="card about-card"><h3>Profile</h3><p class="about-intro">' + escapeHTML(profile.about) + '</p><div class="tags">' + list(content.aboutTags).map(t=>'<span class="tag">'+escapeHTML(t)+'</span>').join('') + '</div><div class="caution"><strong>Scope transparency:</strong> CCTV/AI experience focused on application-visible behavior and feature validation, not AI model evaluation. Drone GCS work was limited to discovery and test planning due to access constraints.</div></article><article class="card about-card"><h3>Relevant experience</h3><div class="experience-list">' + list(content.experience).map(e => '<div class="experience-item"><span class="timeline-dot"></span><div><strong>' + escapeHTML(e.role) + '</strong><span>' + escapeHTML(e.company) + ' · ' + escapeHTML(e.period) + '</span><p>' + escapeHTML(e.description) + '</p></div></div>').join('') + '</div><div class="caution"><strong>Education:</strong> ' + escapeHTML(profile.education) + '<br><strong>Training:</strong> ' + escapeHTML(profile.certification) + '</div><h3 style="margin-top:22px">Leadership & community</h3><div class="experience-list">' + list(content.organizations).map(o => '<div class="experience-item"><span class="timeline-dot"></span><div><strong>' + escapeHTML(o.role) + ' · ' + escapeHTML(o.organization) + '</strong><span>' + escapeHTML(o.period) + '</span><p>' + escapeHTML(o.description) + '</p></div></div>').join('') + '</div></article>';
+    }
+    function render(content) {
+      const profile = content.profile || {};
+      const copy = content.copy || {};
+      const appearance = content.appearance || {};
+      const vars = { '--navy': appearance.navy, '--navy-2': appearance.navy2, '--ink': appearance.ink, '--muted': appearance.muted, '--sky': appearance.sky, '--sky-2': appearance.sky2, '--line': appearance.line, '--paper': appearance.paper, '--bg': appearance.bg, '--teal': appearance.teal, '--radius': (Number(appearance.radius) || 22) + 'px' };
+      Object.entries(vars).forEach(([key,val]) => { if (val) document.documentElement.style.setProperty(key, val); });
+      document.title = profile.siteTitle || ((profile.name || 'QA Portfolio') + ' | Software QA Portfolio');
+      $('metaDescription').setAttribute('content', (profile.intro || '').slice(0, 155));
+      const initials = String(profile.name || 'QA').split(/\s+/).filter(Boolean).slice(0,2).map(n=>n[0]).join('').toUpperCase();
+      $('brandMark').textContent = initials;
+      $('brandName').textContent = (profile.name || 'QA Portfolio').split(' ')[0] + '.';
+      $('heroEyebrow').textContent = profile.eyebrow || 'Software Quality Assurance';
+      setText('navHome', copy.navHome || 'Home'); setText('navSkills', copy.navSkills || 'Skills'); setText('navProjects', copy.navProjects || 'Projects'); setText('navArtifacts', copy.navArtifacts || 'Artifacts'); setText('navAbout', copy.navAbout || 'About'); setText('navContact', (copy.navContact || 'Let’s Connect') + ' ↗');
+      setText('heroProjectsButton', copy.heroProjectsButton || 'Explore my projects ↘');
+      setText('heroArtifactsButton', copy.heroArtifactsButton || 'View testing artifacts ↗');
+      setText('skillsKicker', copy.skillsKicker || 'What I bring'); setText('skillsTitle', copy.skillsTitle || 'QA skills & tools'); setText('skillsDesc', copy.skillsDescription || 'A transparent view of hands-on experience and areas I am actively learning.');
+      setText('projectsKicker', copy.projectsKicker || 'Selected work'); setText('projectsTitle', copy.projectsTitle || 'Project case studies'); setText('projectsDesc', copy.projectsDescription || 'Anonymized summaries of selected QA experiences.');
+      setText('artifactsKicker', copy.artifactsKicker || 'Work samples'); setText('artifactsTitle', copy.artifactsTitle || 'Testing artifacts'); setText('artifactsDesc', copy.artifactsDescription || 'Examples of testing artifacts.');
+      setText('approachKicker', copy.approachKicker || 'My approach'); setText('approachTitle', copy.approachTitle || 'From question to evidence'); setText('approachDesc', copy.approachDescription || 'A practical workflow for testing.');
+      setText('aboutKicker', copy.aboutKicker || 'A little about me'); setText('aboutTitle', copy.aboutTitle || 'Curious by nature, careful by practice'); setText('aboutDesc', copy.aboutDescription || 'I value clear communication and documented decisions.');
+      setText('contactKicker', copy.contactKicker || 'Let’s connect'); setText('emailLink', copy.emailButtonText || 'Email me'); setText('linkedinLink', copy.linkedinButtonText || 'LinkedIn'); setText('githubLink', copy.githubButtonText || 'GitHub'); setText('contactNote', copy.contactPlaceholder || 'Add your public contact links in the CMS before publishing.');
+      const nameParts = String(profile.name || 'QA Portfolio').split(' ');
+      $('heroName').innerHTML = 'Hi, I\'m<br><span style="color:#2f7698">' + escapeHTML(nameParts[0]) + (nameParts.length > 1 ? ' ' + escapeHTML(nameParts.slice(1).join(' ')) : '') + '.</span>';
+      $('heroRole').textContent = profile.role || '';
+      $('heroIntro').textContent = profile.intro || '';
+      $('heroPills').innerHTML = (profile.location ? '<span class="mini-pill">⌖ ' + escapeHTML(profile.location) + '</span>' : '') + list(profile.heroPills).map(p => '<span class="mini-pill">✓ ' + escapeHTML(p) + '</span>').join('');
+      const cv = safeUrl(profile.cvUrl);
+      $('cvButton').hidden = !cv;
+      if (cv) $('cvButton').href = cv;
+      $('skillsGrid');
+      renderSkills(content.skills);
+      renderProjects(content.projects);
+      renderArtifacts(content.artifacts);
+      renderApproach(content.approachSteps);
+      renderAbout(content);
+      $('contactTitle').textContent = profile.footerTitle || 'Let\'s build better products together.';
+      $('contactText').textContent = profile.footerText || '';
+      const email = String(profile.email || '').trim();
+      $('emailLink').href = email ? 'mailto:' + email + '?subject=' + encodeURIComponent('Software QA Portfolio Contact') : '#contact';
+      $('emailLink').hidden = !email;
+      const linkedin = safeUrl(profile.linkedin);
+      $('linkedinLink').hidden = !linkedin;
+      if (linkedin) $('linkedinLink').href = linkedin;
+      const github = safeUrl(profile.github);
+      $('githubLink').hidden = !github;
+      if (github) $('githubLink').href = github;
+      const phone = String(profile.phone || '').replace(/[^+0-9]/g, '');
+      $('phoneLink').hidden = !phone;
+      if (phone) $('phoneLink').href = 'tel:' + phone;
+      const missingContact = [!email ? 'Email not added yet.' : '', !linkedin ? 'LinkedIn not added yet.' : ''].filter(Boolean).join(' ');
+      $('contactNote').textContent = missingContact || copy.contactPlaceholder || ''; 
+      $('footerBrand').textContent = (profile.name || 'QA Portfolio') + ' · ' + (profile.role || 'Software QA');
+      $('footerNote').textContent = (copy.footerNote || 'Portfolio demo · Anonymized case studies') + ' · ' + new Date().getFullYear();
+    }
+    async function loadContent() {
+      try {
+        const response = await fetch(CONTENT_URL, { cache: 'no-store' });
+        if (!response.ok) throw new Error('Could not load content/portfolio.json (HTTP ' + response.status + ').');
+        const content = await response.json();
+        render(content);
+      } catch (error) {
+        console.error(error);
+        const main = document.querySelector('main');
+        main.insertAdjacentHTML('afterbegin', '<div class="wrap load-error"><strong>Portfolio content did not load.</strong> Make sure the site is served over HTTP and the file <code>content/portfolio.json</code> exists. Do not open index.html directly as a file.</div>');
+      }
+    }
+    const menuToggle = $('menuToggle');
+    const navLinks = $('navLinks');
+    menuToggle.addEventListener('click', () => { const open = navLinks.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', String(open)); menuToggle.textContent = open ? '×' : '☰'; });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); menuToggle.textContent='☰'; }));
+    loadContent();
+  </script>
+</body>
+</html>

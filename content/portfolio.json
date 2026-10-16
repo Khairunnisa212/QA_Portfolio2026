@@ -1,0 +1,348 @@
+{
+  "profile": {
+    "siteTitle": "Khairunnisa Fajriyanti | Software QA Portfolio",
+    "name": "Khairunnisa Fajriyanti",
+    "role": "Early-career Software QA · Manual Testing",
+    "location": "Indonesia",
+    "eyebrow": "Software Quality Assurance",
+    "intro": "I enjoy understanding how systems behave, turning requirements into test scenarios, documenting findings clearly, and exploring how software quality affects real users and workflows.",
+    "about": "I am an Informatics Engineering graduate (GPA 3.49/4.00) with experience in manual testing, UAT, regression testing, test case design, defect documentation, application administration, data validation, and technical writing. I have worked across enterprise and web applications with different levels of documentation and development maturity. I enjoy breaking down workflows, identifying edge cases, clarifying expected behavior, and communicating findings in a way that helps teams decide what to do next.",
+    "education": "Bachelor's Degree in Informatics Engineering — UHAMKA | GPA 3.49 / 4.00",
+    "certification": "Mini Bootcamp Software Testing — PT Bajau Escorindo (2025)",
+    "email": "",
+    "phone": "",
+    "linkedin": "",
+    "github": "",
+    "cvUrl": "",
+    "heroPills": [
+      "Manual & Functional Testing",
+      "Test Design & Documentation",
+      "Workflow Analysis"
+    ],
+    "footerTitle": "Let's build better products together.",
+    "footerText": "Open to learning, collaboration, and early-career QA opportunities."
+  },
+  "skills": [
+    {
+      "id": "testing-fundamentals",
+      "title": "Testing Fundamentals",
+      "description": "Designing and executing tests to compare actual system behavior against defined expectations.",
+      "items": [
+        "Manual testing",
+        "Functional testing",
+        "UAT",
+        "Regression testing",
+        "Positive / negative testing",
+        "Retesting"
+      ],
+      "level": "experience",
+      "icon": "☑"
+    },
+    {
+      "id": "analysis-documentation",
+      "title": "Analysis & Documentation",
+      "description": "Breaking workflows into scenarios, recording defects, clarifying requirements, and documenting user procedures.",
+      "items": [
+        "Test scenarios",
+        "Test cases",
+        "Bug reports",
+        "Expected vs actual",
+        "User guides",
+        "User feedback"
+      ],
+      "level": "experience",
+      "icon": "⌕"
+    },
+    {
+      "id": "tools-learning",
+      "title": "Tools & Growing Skills",
+      "description": "Tools and technical areas used or explored across work, training, and self-study.",
+      "items": [
+        "Jira",
+        "Notion",
+        "SQL basics",
+        "Postman / API — learning",
+        "JavaScript — learning",
+        "Automation — learning"
+      ],
+      "level": "learning",
+      "icon": "⌘"
+    }
+  ],
+  "projects": [
+    {
+      "id": "cctv-ai",
+      "title": "CCTV & AI Security",
+      "subtitle": "Edge-case testing and requirement clarification",
+      "category": "Manual QA",
+      "visual": "camera",
+      "icon": "◉",
+      "status": "Professional experience · anonymized",
+      "tags": [
+        "Manual QA",
+        "Edge cases",
+        "Requirement clarification"
+      ],
+      "summary": "Manual QA exposure on a web-based perimeter-security platform integrating CCTV monitoring and AI-powered features. Internal product details and screenshots are intentionally omitted.",
+      "role": "Observed and tested available application behavior, developed test scenarios and user documentation, and communicated findings for clarification.",
+      "challenge": "The application was partially developed when testing began, while detailed product documentation and requirements were initially limited.",
+      "approach": [
+        "Explored available features and user flows.",
+        "Compared observed behavior with the information available and recorded observations.",
+        "Raised questions where expected behavior or classification rules needed clarification."
+      ],
+      "finding": "A registered visitor's name appeared when the face was almost fully visible. When the face was partially visible at an angle, the system displayed “Stranger”.",
+      "outcome": "Documented the observation and identified questions for expected behavior. Follow-up implementation status is unknown.",
+      "learning": "Learned to separate observed behavior from a confirmed defect, and to clarify recognition rules before defining expected results. This work validated application-visible behavior, not AI model performance.",
+      "tagsFilter": [
+        "manual",
+        "edge-cases"
+      ]
+    },
+    {
+      "id": "erp-hris",
+      "title": "Internal ERP / HRIS",
+      "subtitle": "Workflow quality and data-integrity risks",
+      "category": "Functional QA",
+      "visual": "erp",
+      "icon": "▦",
+      "status": "Professional experience · anonymized",
+      "tags": [
+        "Functional testing",
+        "Workflow analysis",
+        "User feedback"
+      ],
+      "summary": "Manual testing and user feedback for an internal enterprise system supporting employee processes and asset requests.",
+      "role": "Reviewed user workflows, identified issues, documented observations, collected user feedback, and communicated findings and improvement ideas to relevant stakeholders.",
+      "challenge": "An overtime-request workflow could lead users to submit a second request when actual overtime differed from the estimate, while the form did not offer an edit option.",
+      "approach": [
+        "Followed the workflow that led to duplicate submissions.",
+        "Documented the potential impact on overtime records and calculations.",
+        "Discussed a possible workflow alternative with HR."
+      ],
+      "finding": "The design created a risk of duplicate overtime records or calculations when the original request could not be edited.",
+      "outcome": "Shared the finding and a proposed alternative. The implementation outcome was not confirmed.",
+      "learning": "Learned to connect user behavior, workflow design, data integrity, and operational impact when analyzing quality issues.",
+      "tagsFilter": [
+        "manual",
+        "workflow"
+      ]
+    },
+    {
+      "id": "drone-gcs",
+      "title": "Drone Ground Control Station",
+      "subtitle": "System discovery and test planning",
+      "category": "Test Planning",
+      "visual": "drone",
+      "icon": "✦",
+      "status": "Professional experience · limited access",
+      "tags": [
+        "System discovery",
+        "Test planning"
+      ],
+      "summary": "Early-stage exploration of a Ground Control Station (GCS) application while the system was still under development.",
+      "role": "Reviewed available UI and feature walkthroughs, outlined workflows, and drafted initial test scenarios based on the information available.",
+      "challenge": "The system was still being developed and access to a test/staging environment was limited.",
+      "approach": [
+        "Reviewed available screens and feature walkthroughs.",
+        "Translated verbally explained workflows into an initial test-flow outline.",
+        "Drafted candidate test scenarios and documented access limitations."
+      ],
+      "finding": "Several behaviors required validation in an accessible test environment; drafted scenarios were not equivalent to executed tests.",
+      "outcome": "Prepared initial test-planning documentation. Comprehensive test execution was not performed.",
+      "learning": "Learned to distinguish discovery and test design from test execution, and to document environment/access blockers.",
+      "tagsFilter": [
+        "planning"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "visitor-observation",
+      "title": "Example: Test Observation",
+      "category": "Edge-case Analysis",
+      "description": "An anonymized example based on an observed behavior. It is not a published company test record.",
+      "status": "Anonymized example",
+      "rows": [
+        {
+          "field": "Scenario",
+          "value": "Registered visitor appears at a partial face angle"
+        },
+        {
+          "field": "Precondition",
+          "value": "Visitor registered through the kiosk"
+        },
+        {
+          "field": "Actual",
+          "value": "UI displays “Stranger” when only part of the face is visible"
+        },
+        {
+          "field": "Expected",
+          "value": "Requires clarification against recognition/classification requirements"
+        },
+        {
+          "field": "Next action",
+          "value": "Confirm definitions for recognized, unknown, and stranger; test varied visibility conditions"
+        }
+      ]
+    },
+    {
+      "id": "overtime-workflow",
+      "title": "Example: Workflow Quality Finding",
+      "category": "Workflow Analysis",
+      "description": "An anonymized summary of an overtime workflow issue; implementation outcome is unknown.",
+      "status": "Raised / follow-up unknown",
+      "rows": [
+        {
+          "field": "Scenario",
+          "value": "Overtime duration changes after initial request"
+        },
+        {
+          "field": "Steps",
+          "value": "Submit a 3-hour estimate; actual overtime becomes 5 hours; form cannot be edited; a second request is submitted"
+        },
+        {
+          "field": "Risk",
+          "value": "Duplicate overtime records or inaccurate calculations"
+        },
+        {
+          "field": "Suggested follow-up",
+          "value": "Define an amendment workflow and validate duration using the agreed business rule"
+        },
+        {
+          "field": "Status",
+          "value": "Raised; follow-up outcome unknown"
+        }
+      ]
+    },
+    {
+      "id": "api-practice",
+      "title": "API Testing Practice",
+      "category": "API Testing",
+      "description": "Add a Postman collection and actual execution results after completing a public practice project.",
+      "status": "Learning in progress",
+      "rows": [
+        {
+          "field": "Scope",
+          "value": "To be defined"
+        },
+        {
+          "field": "Evidence",
+          "value": "Add your own executed results before publishing"
+        }
+      ]
+    }
+  ],
+  "approachSteps": [
+    {
+      "title": "Understand",
+      "description": "Review available requirements, user flows, and assumptions."
+    },
+    {
+      "title": "Clarify",
+      "description": "Ask the product owner or stakeholder about ambiguous expected behavior."
+    },
+    {
+      "title": "Design",
+      "description": "Build scenarios, test cases, and relevant edge cases."
+    },
+    {
+      "title": "Test & record",
+      "description": "Execute tests and capture actual results and reproducible evidence."
+    },
+    {
+      "title": "Communicate",
+      "description": "Report findings, risks, blockers, and follow-up status clearly."
+    }
+  ],
+  "experience": [
+    {
+      "role": "Quality Assurance",
+      "company": "PT Truf Teknologi Indonesia",
+      "period": "Jul–Sep 2026",
+      "description": "Manual testing, test cases, bug documentation, user feedback, system discovery, and user guide development across multiple systems."
+    },
+    {
+      "role": "Application Administrator",
+      "company": "PT Otsuka Indonesia",
+      "period": "Dec 2025–Mar 2026",
+      "description": "Functional testing, UAT, regression testing, application support, access management, and documentation."
+    },
+    {
+      "role": "Knowledge Management Analyst Intern",
+      "company": "PT Pupuk Indonesia",
+      "period": "Oct 2022–Apr 2023",
+      "description": "LMS UAT support, issue documentation, data organization, and vendor coordination."
+    },
+    {
+      "role": "Customer Service Analyst Intern",
+      "company": "PT Telkom Indonesia",
+      "period": "Mar–Apr 2021",
+      "description": "Data validation, anomaly identification, reporting support, and database queries."
+    }
+  ],
+  "aboutTags": [
+    "Analytical thinking",
+    "Attention to detail",
+    "Documentation",
+    "Cross-functional communication"
+  ],
+  "appearance": {
+    "navy": "#17385f",
+    "navy2": "#214b78",
+    "ink": "#20344b",
+    "muted": "#667b93",
+    "sky": "#eaf4ff",
+    "sky2": "#dceeff",
+    "line": "#dce8f4",
+    "paper": "#ffffff",
+    "bg": "#f4f8fc",
+    "teal": "#2f9d91",
+    "radius": 22
+  },
+  "copy": {
+    "navHome": "Home",
+    "navSkills": "Skills",
+    "navProjects": "Projects",
+    "navArtifacts": "Artifacts",
+    "navAbout": "About",
+    "navContact": "Let’s Connect",
+    "heroProjectsButton": "Explore my projects",
+    "heroArtifactsButton": "View testing artifacts",
+    "skillsKicker": "What I bring",
+    "skillsTitle": "QA skills & tools",
+    "skillsDescription": "A transparent view of hands-on experience and areas I am actively learning.",
+    "projectsKicker": "Selected work",
+    "projectsTitle": "Project case studies",
+    "projectsDescription": "Anonymized summaries of selected QA experiences. Product names, internal screens, and confidential details are omitted.",
+    "artifactsKicker": "Work samples",
+    "artifactsTitle": "Testing artifacts",
+    "artifactsDescription": "Small, readable examples of how I record a finding and separate observation from expected behavior.",
+    "approachKicker": "My approach",
+    "approachTitle": "From question to evidence",
+    "approachDescription": "A practical workflow for testing, especially when requirements are evolving or documentation is limited.",
+    "aboutKicker": "A little about me",
+    "aboutTitle": "Curious by nature, careful by practice",
+    "aboutDescription": "I value clear communication, documented decisions, and test results that can be understood and verified.",
+    "contactKicker": "Let’s connect",
+    "emailButtonText": "Email me",
+    "linkedinButtonText": "LinkedIn",
+    "githubButtonText": "GitHub",
+    "contactPlaceholder": "Add your public contact links in the CMS before publishing.",
+    "footerNote": "Portfolio demo · Anonymized case studies"
+  },
+  "organizations": [
+    {
+      "role": "Coordinator",
+      "organization": "PKM Center, Faculty of Industrial & Information Technology, UHAMKA",
+      "period": "2019–2021",
+      "description": "Managed participant registration data, event publication and documentation, and supported event planning and speaker coordination."
+    },
+    {
+      "role": "Community Member",
+      "organization": "Generation Girl, Yayasan Generasi Maju Berkarya",
+      "period": "Jul 2021–Present",
+      "description": "Participates in technology workshops and programmes focused on STEM leadership and empowerment."
+    }
+  ]
+}
